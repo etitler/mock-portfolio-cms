@@ -2,7 +2,7 @@
   "name": "elegance-on-the-edge",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "node server",
@@ -21,8 +21,10 @@
   },
   "homepage": "https://github.com/RebelFlesh/elegance-on-the-edge#readme",
   "dependencies": {
+    "@zeit/next-sass": "^1.0.1",
     "express": "^4.17.1",
     "next": "^9.0.7",
+    "node-sass": "^4.12.0",
     "react": "^16.10.1",
     "react-dom": "^16.10.1"
   }

@@ -1,7 +1,10 @@
-import React from 'react'
+import React from "react";
+import "../styles.scss";
+
+import Header from "../components/Header";
 
 const Index = () => (
-  <h1>Welcome to Next.js</h1>
-)
+  <Header />
+);
 
-export default Index
+export default Index;
