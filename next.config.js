@@ -1,5 +1,6 @@
-const withSass = require('@zeit/next-sass');
+const withSass = require("@zeit/next-sass");
 
+//work around for next-sass https://github.com/zeit/next-plugins/issues/541
 function HACK_removeMinimizeOptionFromCssLoaders(config) {
   console.warn(
     'HACK: Removing `minimize` option from `css-loader` entries in Webpack config',

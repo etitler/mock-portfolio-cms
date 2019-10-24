@@ -1,3 +1,13 @@
 .header {
+  display: flex;
+  justify-content: center;
+}
+
+h1 {
+  display: inline-flex;
+}
+
+.hamburger {
   display: inline-block;
+  justify-content: space-between;
 }

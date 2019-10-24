@@ -21,6 +21,8 @@
   },
   "homepage": "https://github.com/RebelFlesh/elegance-on-the-edge#readme",
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.25",
+    "@fortawesome/free-solid-svg-icons": "^5.11.2",
     "@zeit/next-sass": "^1.0.1",
     "express": "^4.17.1",
     "next": "^9.0.7",
