@@ -5,7 +5,7 @@ import ContactForm from '../components/contactForm';
 
 const ContactPage = () => (
     <Layout>
-        <h3>contact me</h3>
+        <h3>contact me</h3> 
         <ContactForm />
     </Layout>
 );
