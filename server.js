@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require('express');
 const next = require('next');
 const apiRoutes = require("./api");
@@ -10,6 +11,7 @@ const handle = app.getRequestHandler();
 app.prepare()
   .then(() => {
     const server = express();
+    server.use(express.json());
 
     server.use("/api", apiRoutes);
 
@@ -22,7 +24,7 @@ app.prepare()
 
       console.log("Listening on port 3000");
     })
-    .catch(err => {
-      console.error(err);
-    });
-});
+  })
+  .catch(err => {
+    console.error(err);
+  });
