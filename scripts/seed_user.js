@@ -8,4 +8,6 @@ const user = {
   role: "admin"
 }
 
+//verify user doesn't already exist. Identical users can be created with this script
+
 createUser(user, console.log);
