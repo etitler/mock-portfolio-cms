@@ -14,4 +14,18 @@ const getUsers = next => pool.query("SELECT * FROM users ORDER BY id ASC;", (err
     return next(results.rows);
   });
 
-module.exports = { getUsers };
+const createUser = (config, next) => {
+  const { username, email, password, role } = config
+  pool.query("INSERT INTO users (username, email, password, role) VALUES ($1, $2, $3, $4)",
+  [username, email, password, role],
+  (error, results) => {
+    if (error) throw new Error(error);
+
+    next(results);
+  });
+};
+
+module.exports = {
+  getUsers,
+  createUser
+};
