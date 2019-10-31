@@ -10,15 +10,9 @@ const transporter = nodemailer.createTransport({
 });
 
 contact.post("*", (req, res) => {
-  if (!req.body.name) {
-    return res.status(400).send({message: "Name required."});
-  };
-  if (!req.body.email) {
-    return res.status(400).send({message: "Email required."});
-  };
-  if (!req.body.message) {
-    return res.status(400).send({message: "Message required."});
-  };
+  if (!req.body.name) return res.status(400).send({message: "Name required."});
+  if (!req.body.email) return res.status(400).send({message: "Email required."});
+  if (!req.body.message) return res.status(400).send({message: "Message required."});
 
   const mailOptions = {
     from: process.env.SENDER_EMAIL_ADDRESS,
