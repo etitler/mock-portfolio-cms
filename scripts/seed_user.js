@@ -1,13 +1,22 @@
 require("dotenv").config();
-const { createUser } = require("../queries");
+const { getUsers, createUser } = require("../queries");
 
-const user = {
+const adminUser = {
   username: "user",
   email: "example@email.com",
   password: "password",
   role: "admin"
 }
 
-//verify user doesn't already exist. Identical users can be created with this script
-
-createUser(user, console.log);
+getUsers((results) => {
+  const userExists = results.filter(user => {
+    return adminUser.username === user.username;
+  });
+  if (!userExists) {
+    createUser(adminUser, res => {
+      console.log("User created:\n", res);
+    });
+  } else {
+    throw new Error("User already exists.");
+  };
+});
