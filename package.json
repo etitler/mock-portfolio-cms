@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/RebelFlesh/elegance-on-the-edge#readme",
   "dependencies": {
+    "bcrypt": "^3.0.6",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "next": "^9.0.7",
