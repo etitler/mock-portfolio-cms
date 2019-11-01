@@ -1,4 +1,5 @@
 const api = require("express").Router();
+const { getUsers } = require("../queries");
 
 //import routers
 // const signup = require("../routers/signup");
@@ -13,6 +14,9 @@ api.use("*admin*", (req, res, next) => {
 
 //compose routes
 //api.use("/signup", signup);
+api.get("/users", async (req, res) => {
+  getUsers(results => res.send(results));
+});
 api.use("/login", login);
 api.use("/contact", contact);
 //etc...
