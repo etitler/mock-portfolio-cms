@@ -7,7 +7,7 @@ const login = require("./login");
 const contact = require("./contact");
 
 //middlewares
-api.use("*admin*", (req, res, next) => {
+api.use(/.*(admin).*/, (req, res, next) => {
   console.log("Authenticate");
   next();
 });
